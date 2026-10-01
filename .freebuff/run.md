@@ -2,7 +2,7 @@
 
 ## Deployment notes (GitHub Pages)
 
-- Repo: `hoodie-site`. `vite.config.ts` sets `base: '/hoodie-site/'` — change to
+- Repo: `kacimo-hub/nike-sweat`. `vite.config.ts` sets `base: '/nike-sweat/'` — change to
   `'/'` only for a root (*.github.io) or custom-domain deploy.
 - `.github/workflows/deploy.yml` deploys on every push to `main`: `npm ci` →
   `npm run build` → upload `./dist` → `actions/deploy-pages@v4`. ubuntu-latest
