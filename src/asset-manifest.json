@@ -1,0 +1,93 @@
+{
+  "generatedAt": "2026-09-24T11:10:16.013Z",
+  "scenes": {
+    "hero": {
+      "dir": "assets/frames/hero",
+      "frames": 72,
+      "q": 92,
+      "native": true,
+      "width": 1280,
+      "height": 720,
+      "crush": "0.0392",
+      "source": "Gray_hoodie_product_video_20260923213611.mp4",
+      "f0": 0,
+      "f1": 143
+    },
+    "design360": {
+      "dir": "assets/frames/design360",
+      "frames": 46,
+      "q": 88,
+      "native": true,
+      "width": 1280,
+      "height": 720,
+      "crush": "0.0392",
+      "source": "Hoodie_rotating_on_black_background_20260923213251.mp4",
+      "f0": 0,
+      "f1": 90
+    },
+    "fabric": {
+      "dir": "assets/frames/fabric",
+      "frames": 46,
+      "q": 93,
+      "native": true,
+      "width": 1280,
+      "height": 720,
+      "crush": "0.0392",
+      "source": "Gray_hoodie_fabric_macro_shot_20260923214044.mp4",
+      "f0": 30,
+      "f1": 120
+    },
+    "hoodfit": {
+      "dir": "assets/frames/hoodfit",
+      "frames": 72,
+      "q": 88,
+      "native": true,
+      "width": 1280,
+      "height": 720,
+      "crush": "0.0392",
+      "source": "Gray_hoodie_product_showcase_20260923214348.mp4",
+      "f0": 0,
+      "f1": 143
+    }
+  },
+  "tiles": {
+    "fabric": {
+      "dir": "assets/tiles/fabric",
+      "frames": 7
+    },
+    "orbits": {
+      "dir": "assets/tiles/orbits",
+      "frames": 5
+    },
+    "rotating": {
+      "dir": "assets/tiles/rotating",
+      "frames": 5
+    },
+    "showcase": {
+      "dir": "assets/tiles/showcase",
+      "frames": 6
+    }
+  },
+  "stills": {
+    "still-pair.jpg": {
+      "file": "assets/still-pair.jpg",
+      "bytes": 272147
+    },
+    "still-front.jpg": {
+      "file": "assets/still-front.jpg",
+      "bytes": 210521
+    },
+    "still-front-portrait.jpg": {
+      "file": "assets/still-front-portrait.jpg",
+      "bytes": 304370
+    },
+    "still-hood-closeup.jpg": {
+      "file": "assets/still-hood-closeup.jpg",
+      "bytes": 421466
+    },
+    "still-back.jpg": {
+      "file": "assets/still-back.jpg",
+      "bytes": 288982
+    }
+  }
+}

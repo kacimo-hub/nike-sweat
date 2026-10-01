@@ -1,0 +1,256 @@
+/* ===== nav ===== */
+.nav {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  height: var(--nav-h);
+  display: flex;
+  align-items: center;
+  transition: background 0.35s var(--ease), border-color 0.35s var(--ease),
+    backdrop-filter 0.35s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+
+.nav[data-stuck] {
+  background: rgba(3, 3, 3, 0.72);
+  backdrop-filter: blur(14px) saturate(1.2);
+  border-bottom-color: rgba(216, 216, 216, 0.08);
+}
+
+.nav__inner {
+  width: min(var(--maxw), 92vw);
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav__brand {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.nav__links {
+  display: flex;
+  gap: 1.4rem;
+  margin-inline-start: auto;
+}
+
+.nav__links a {
+  font-size: 0.8rem;
+  color: var(--fleece-light);
+  transition: color 0.2s;
+}
+
+.nav__links a:hover,
+.nav__links a[aria-current='true'] {
+  color: var(--ink-white);
+}
+
+.nav__lang {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--fleece-shadow);
+  border-radius: 999px;
+  color: var(--fleece-peak);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.nav__lang:hover {
+  border-color: var(--fleece-light);
+  color: var(--ink-white);
+}
+
+.nav__buy {
+  font-size: 0.8rem;
+  padding: 0.35rem 1rem;
+  border-radius: 999px;
+  background: var(--ink-white);
+  color: var(--void);
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.nav__buy:hover {
+  opacity: 0.85;
+}
+
+/* ===== scene shell ===== */
+.scene__track {
+  position: relative;
+}
+
+.scene__stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.scene__media {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  will-change: transform;
+}
+
+.scene__media canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/*
+ * Fine film grain over the media stage: hides banding in the near-black
+ * backdrop and the residual softness of upscaled frames. CSS-generated
+ * (no media asset), static (reduced-motion safe), 3.5% opacity.
+ */
+.scene__stage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+  mix-blend-mode: overlay;
+}
+
+/*
+ * Upscale cap: on very large screens the canvas CSS box still fills the
+ * stage, but the drawn media inside is capped at 1.3x native by JS. The
+ * radial feather in FramePlayer fades the frame edge into the void, so no
+ * hard boundary is visible.
+ */
+
+.scene__copy {
+  position: relative;
+  z-index: 2;
+  grid-row: 2;
+  width: min(var(--maxw), 92vw);
+  margin: 0 auto;
+  padding-bottom: 9vh;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+[data-copy] {
+  opacity: 0;
+  will-change: opacity, transform;
+}
+
+[data-visible] {
+  pointer-events: auto;
+}
+
+.kicker {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--fleece-light);
+}
+
+html[dir='rtl'] .kicker {
+  letter-spacing: 0;
+}
+
+.headline-xl {
+  font-size: clamp(2.6rem, 6.5vw, 5.2rem);
+  line-height: 1.04;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+html[dir='rtl'] .headline-xl {
+  letter-spacing: 0;
+  line-height: 1.28;
+}
+
+.headline-lg {
+  font-size: clamp(1.9rem, 4vw, 3.2rem);
+  line-height: 1.08;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+html[dir='rtl'] .headline-lg {
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.sub {
+  color: var(--fleece-peak);
+  font-size: 1.05rem;
+  max-width: 34ch;
+}
+
+.price {
+  color: var(--fleece-peak);
+  font-size: 0.95rem;
+}
+
+.cta-row {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-top: 0.8rem;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.7rem 1.9rem;
+  border-radius: 999px;
+  background: var(--ink-white);
+  color: var(--void);
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: opacity 0.2s;
+}
+
+.cta:hover {
+  opacity: 0.85;
+}
+
+/* unverified-claim chip */
+[data-unverified]::after {
+  content: '?';
+  display: inline-block;
+  margin-inline-start: 0.45em;
+  font-size: 0.62em;
+  color: var(--fleece-shadow);
+  vertical-align: super;
+}
+
+/* ===== scroll cue ===== */
+.scroll-cue {
+  position: absolute;
+  bottom: 3vh;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--fleece-shadow);
+  font-size: 0.72rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+/* ===== section frame (non-pinned sections) ===== */
+.section {
+  width: min(var(--maxw), 92vw);
+  margin: 0 auto;
+  padding-block: 14vh;
+}
+
+.section-head {
+  margin-bottom: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}

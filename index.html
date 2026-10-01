@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heather-Grey Hoodie</title>
+    <meta name="description" content="Cinematic product page for a heather-grey oversized hoodie." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23030303'/%3E%3Cpath d='M10 20c0-6 3-11 6-11s6 5 6 11' stroke='%23d8d8d8' stroke-width='2.4' fill='none'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div class="preloader" id="preloader" aria-hidden="true">
+      <div class="preloader__mark">Loading</div>
+    </div>
+
+    <div id="lang-live" role="status" aria-live="polite"></div>
+
+    <nav class="nav" id="nav" aria-label="Product">
+      <div class="nav__inner">
+        <a class="nav__brand" href="#hero" data-i18n="meta.title">Heather-Grey Hoodie</a>
+        <div class="nav__links">
+          <a href="#highlights" data-i18n="nav.highlights">Highlights</a>
+          <a href="#design360" data-i18n="nav.design">Design</a>
+          <a href="#fabric" data-i18n="nav.fabric">Fabric</a>
+          <a href="#sizefit" data-i18n="nav.fit">Fit</a>
+          <a href="#details" data-i18n="nav.details">Details</a>
+        </div>
+        <button class="nav__lang" id="lang-toggle" data-i18n="footer.lang">العربية</button>
+        <a class="nav__buy" href="#buy" data-i18n="nav.buy">Buy</a>
+      </div>
+    </nav>
+
+    <main>
+      <!-- 1 · HERO (pinned scene) -->
+      <section class="scene__track" id="hero" data-scene="hero" style="height: 320vh" aria-label="Hero">
+        <div class="scene__stage">
+          <div class="scene__media"><canvas aria-label="Hoodie emerging from darkness"></canvas></div>
+          <div class="scene__copy">
+            <p class="kicker" data-copy data-in="0.42" data-out="0.92" data-i18n="hero.kicker">Heather-Grey Hoodie</p>
+            <h1 class="headline-xl" data-copy data-in="0.45" data-out="0.9" data-i18n="hero.headline">Made to stay.</h1>
+            <p class="sub" data-copy data-in="0.55" data-out="0.9" data-i18n="hero.sub">An oversized fleece hoodie, built from the yarn up.</p>
+            <div class="cta-row" data-copy data-in="0.6" data-out="0.9">
+              <span class="price" data-i18n="hero.price">From $89</span>
+              <a class="cta" href="#buy" data-i18n="hero.cta">Buy</a>
+            </div>
+          </div>
+          <div class="scroll-cue" aria-hidden="true">Scroll</div>
+        </div>
+      </section>
+
+      <!-- 2 · HIGHLIGHTS RAIL -->
+      <section class="section" id="highlights" aria-label="Highlights">
+        <div class="section-head">
+          <p class="kicker" data-i18n="highlights.kicker">Highlights</p>
+          <h2 class="headline-lg" data-i18n="highlights.headline">The highlights.</h2>
+        </div>
+        <div class="rail" id="rail" tabindex="0"></div>
+      </section>
+
+      <!-- 3 · DESIGN 360 (pinned scene) -->
+      <section class="scene__track" id="design360" data-scene="design360" style="height: 300vh" aria-label="Design — 360">
+        <div class="scene__stage">
+          <div class="scene__media"><canvas aria-label="Hoodie rotating front to back"></canvas></div>
+          <div class="scene__copy">
+            <p class="kicker" data-copy data-in="0.14" data-out="0.92" data-i18n="design.kicker">Design</p>
+            <h2 class="headline-lg" data-copy data-in="0.16" data-out="0.9" data-i18n="design.headline">Oversized by design.</h2>
+            <div class="beats">
+              <p class="beat" data-copy data-in="0.2" data-out="0.42" data-i18n="design.beat_front">Straight front.</p>
+              <p class="beat" data-copy data-in="0.42" data-out="0.64" data-i18n="design.beat_side">Dropped shoulders.</p>
+              <p class="beat" data-copy data-in="0.64" data-out="0.9" data-i18n="design.beat_back">Clean from behind.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4 · FABRIC (pinned scene) -->
+      <section class="scene__track" id="fabric" data-scene="fabric" style="height: 280vh" aria-label="Fabric">
+        <div class="scene__stage">
+          <div class="scene__media"><canvas aria-label="Macro of heather fleece"></canvas></div>
+          <div class="scene__copy">
+            <p class="kicker" data-copy data-in="0.42" data-out="0.92" data-i18n="fabric.kicker">Fabric</p>
+            <h2 class="headline-lg" data-copy data-in="0.45" data-out="0.9" data-i18n="fabric.headline">Soft inside. Tough outside.</h2>
+            <div class="specs">
+              <div class="spec" data-copy data-in="0.58" data-out="0.92">
+                <span class="spec__num" data-claim="fabric.spec_weight" data-i18n="fabric.spec_weight">380 gsm</span>
+                <span class="spec__label" data-claim="fabric.spec_weight_label" data-i18n="fabric.spec_weight_label">midweight fleece</span>
+              </div>
+              <div class="spec" data-copy data-in="0.64" data-out="0.92">
+                <span class="spec__num" data-claim="fabric.spec_face" data-i18n="fabric.spec_face">100% cotton face</span>
+                <span class="spec__label" data-claim="fabric.spec_face_label" data-i18n="fabric.spec_face_label">loopback, brushed back</span>
+              </div>
+              <div class="spec" data-copy data-in="0.7" data-out="0.92">
+                <span class="spec__num" data-claim="fabric.spec_weave" data-i18n="fabric.spec_weave">Heather knit</span>
+                <span class="spec__label" data-claim="fabric.spec_weave_label" data-i18n="fabric.spec_weave_label">visible at every angle</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5 · HOOD & FIT (pinned scene) -->
+      <section class="scene__track" id="hoodfit" data-scene="hoodfit" style="height: 260vh" aria-label="Hood and fit">
+        <div class="scene__stage">
+          <div class="scene__media"><canvas aria-label="Hoodie showcase"></canvas></div>
+          <div class="scene__copy">
+            <p class="kicker" data-copy data-in="0.42" data-out="0.92" data-i18n="hoodfit.kicker">Hood &amp; Fit</p>
+            <h2 class="headline-lg" data-copy data-in="0.45" data-out="0.9" data-i18n="hoodfit.headline">A hood that holds its shape.</h2>
+            <div class="cards">
+              <div class="card" data-copy data-in="0.58" data-out="0.92"><p data-claim="hoodfit.card_hood" data-i18n="hoodfit.card_hood">Double-layer hood.</p></div>
+              <div class="card" data-copy data-in="0.66" data-out="0.92"><p data-claim="hoodfit.card_shoulder" data-i18n="hoodfit.card_shoulder">Dropped shoulders.</p></div>
+              <div class="card" data-copy data-in="0.74" data-out="0.92"><p data-claim="hoodfit.card_rib" data-i18n="hoodfit.card_rib">Ribbed cuffs and hem.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6 · DETAILS GRID + ACT BUMPER -->
+      <section class="section" id="details" aria-label="Details">
+        <div class="section-head">
+          <p class="kicker" data-i18n="details.kicker">Details</p>
+          <h2 class="headline-lg" data-i18n="details.headline">Every detail, considered.</h2>
+        </div>
+        <div class="dgrid">
+          <figure class="dtile">
+            <img src="assets/still-hood-closeup.jpg" alt="Close-up of hood and chest embroidery" loading="lazy" style="--fx: 45%" />
+            <figcaption data-claim="details.d_swoosh" data-i18n="details.d_swoosh">Chest embroidery</figcaption>
+          </figure>
+          <figure class="dtile">
+            <img src="assets/still-back.jpg" alt="Back view of the hoodie" loading="lazy" style="--fy: 30%" />
+            <figcaption data-claim="details.d_back" data-i18n="details.d_back">Back panel</figcaption>
+          </figure>
+          <figure class="dtile">
+            <img src="assets/still-pair.jpg" alt="Front and three-quarter views of the hoodie" loading="lazy" style="--fx: 30%" />
+            <figcaption data-claim="details.d_front" data-i18n="details.d_front">Front profile</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="bumper" aria-hidden="true">
+        <div class="bumper__inner">
+          <img src="assets/still-front.jpg" alt="" loading="lazy" />
+          <div class="bumper__veil" id="bumper-veil"></div>
+        </div>
+      </div>
+
+      <!-- 7 · SIZE & FIT -->
+      <section class="section" id="sizefit" aria-label="Size and fit">
+        <div class="section-head">
+          <p class="kicker" data-i18n="sizefit.kicker">Size &amp; Fit</p>
+          <h2 class="headline-lg" data-i18n="sizefit.headline">Find your fit.</h2>
+          <p class="sub" data-claim="sizefit.note" data-i18n="sizefit.note">Oversized cut. Size down for a regular fit.</p>
+        </div>
+        <div class="sizegrid">
+          <div>
+            <div class="sizes" id="size-buttons" role="group" aria-label="Size"></div>
+          </div>
+          <div>
+            <table class="fit-table" id="fit-table">
+              <thead>
+                <tr>
+                  <th data-i18n="sizefit.col_size">Size</th>
+                  <th data-i18n="sizefit.col_chest">Chest</th>
+                  <th data-i18n="sizefit.col_length">Body length</th>
+                  <th data-i18n="sizefit.col_sleeve">Sleeve</th>
+                </tr>
+              </thead>
+              <tbody id="fit-body"></tbody>
+            </table>
+            <p class="unit-note" data-claim="sizefit.unit_note" data-i18n="sizefit.unit_note">cm, garment measured flat</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 8 · BUY -->
+      <section class="section" id="buy" aria-label="Buy">
+        <div class="buy-grid">
+          <div class="buy-media">
+            <img src="assets/still-front-portrait.jpg" alt="Front view of the heather-grey hoodie" loading="lazy" />
+          </div>
+          <div class="buy-panel">
+            <div>
+              <p class="kicker" data-i18n="buy.kicker">Buy</p>
+              <h2 class="headline-lg" data-i18n="buy.headline">Get yours.</h2>
+            </div>
+            <div class="buy-row">
+              <span class="buy-row__label" data-i18n="buy.size_label">Size</span>
+              <span class="buy-row__value" id="buy-size">M</span>
+            </div>
+            <div class="buy-row">
+              <span class="buy-row__label" data-i18n="buy.qty_label">Quantity</span>
+              <span class="qty">
+                <button id="qty-minus" aria-label="Decrease quantity">−</button>
+                <span class="qty__n" id="qty-n">1</span>
+                <button id="qty-plus" aria-label="Increase quantity">+</button>
+              </span>
+            </div>
+            <div class="buy-row">
+              <span class="buy-row__label" data-i18n="buy.total_label">Total</span>
+              <span class="buy-row__value" id="buy-total">$89</span>
+            </div>
+            <a class="cta" href="#" id="buy-cta" data-i18n="buy.cta">Order</a>
+            <p class="buy-note" data-claim="buy.note" data-i18n="buy.note">Free delivery over $120. Returns within 14 days.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9 · SPECS & CARE -->
+      <section class="section" id="specs" aria-label="Specs and care">
+        <div class="section-head">
+          <p class="kicker" data-i18n="specs.kicker">Specs &amp; Care</p>
+          <h2 class="headline-lg" data-i18n="specs.headline">Details &amp; care.</h2>
+        </div>
+        <div class="acc" id="acc"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner">
+        <span data-i18n="footer.legal">Placeholder demo page.</span>
+        <span>© 2026 · <a href="mailto:orders@example.com">orders@example.com</a></span>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
