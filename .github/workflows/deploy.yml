@@ -18,6 +18,8 @@ jobs:
         with:
           node-version: 20
       - run: npm ci
+      - name: Install ffmpeg (required by scripts/prepare-assets.mjs)
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
       - run: npm run build
       - uses: actions/upload-pages-artifact@v3
         with:

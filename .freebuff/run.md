@@ -5,9 +5,10 @@
 - Repo: `kacimo-hub/nike-sweat`. `vite.config.ts` sets `base: '/nike-sweat/'` — change to
   `'/'` only for a root (*.github.io) or custom-domain deploy.
 - `.github/workflows/deploy.yml` deploys on every push to `main`: `npm ci` →
-  `npm run build` → upload `./dist` → `actions/deploy-pages@v4`. ubuntu-latest
-  runners ship ffmpeg, so `prepare-assets.mjs` runs unmodified on CI. The 10
-  source clips/stills are committed for that reason (~21 MB).
+  `npm run build` → upload `./dist` → `actions/deploy-pages@v4`. Runners do NOT
+  ship ffmpeg, so the workflow installs it via apt before building
+  (`prepare-assets.mjs` needs it). The 10 source clips/stills are committed for
+  that reason (~21 MB).
 - `public/.nojekyll` ships into `dist/` so GitHub Pages serves the `assets/`
   folder as-is (no Jekyll processing).
 - All runtime asset URLs go through `withBase()` (src/baseUrl.ts), so frame/
