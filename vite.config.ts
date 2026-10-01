@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
 
-// GitHub Pages serves the site under /hoodie-site/ (project page), not /.
+// GitHub Pages serves the site under /nike-sweat/ (project page), not /.
 // The trailing slashes matter. For a *.github.io root page or custom domain,
 // change base back to '/'.
 export default defineConfig({
-  base: '/hoodie-site/',
+  base: '/nike-sweat/',
   server: {
     port: 5173,
     strictPort: false,
